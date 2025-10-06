@@ -1,4 +1,4 @@
-# ** 🎯 Chapter 1 - The Machine Learning Landscape**
+# 🎯 ** Chapter 1 - The Machine Learning Landscape**
 
 ## *Tantangan dan Strategi dalam Machine Learning*
 ### 1. Fitur yang Tidak Relevan dan Pentingnya Feature Engineering ###
