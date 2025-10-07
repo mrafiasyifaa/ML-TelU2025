@@ -30,7 +30,7 @@
 - Pemantuan dan pengawasan kinerja sistem dilakukan secara teratur
 - Peringatan pemicu saat terjadi penurunan penting karena model cenderung turun kualitasnya seiring waktu
 
-## *Transformer* Kustomm
+## *Transformer* Kustom
 - *Transformer* kustom dapat dibuat menggunakan metode *fit()*, *transform()*, dan *fit_transform()*
 - *TransformerMixin* menyediakan *fit_transofrm* secara gratis dan *BaseEstimator* menyediakan *get_params()* dan *set_params()* untuk penyetelan *hyperparameter* otomatis
 
@@ -39,3 +39,22 @@
 - Dua metode umum adalah *min-max scaling* (normalisasi) dan standardisasi
 - *Min-max scaling* mengubah skala nilai ke rentang 0 hingga 1
 - Standardisasi mengurangi rata-rata dan membagi dengan standar deviasi
+
+## *Transformation Pipeline*
+- Kelas *pipeline* di *Scikit-Learn* membantu mengelola urutan transformasi data
+- *Pipeline* untuk atribut numerik: *SimpleImputer*, *CombinedAttributesAdded*, dan *StandardScaler*
+- *Scikit-Learn* versi **0.20** memperkenalkan *ColumnTransformer* untuk menangani kolom kategorikal dan numerik secara terpisah, menerapkannya sesuai ke setiap kolom
+
+## Memilih dan Melatih Model
+> Melatih model Regresi Linear (*underfitting*) dan *DecisionTreeRegressor* (*overfitting*)
+
+## Evaluasi menggunakan *Cross Validation*
+- *Cross Validation* memberikan perkiraan yang lebih akurat dari kinerja model dan ukuran presisi dari perkiraan standar deviasi
+- Skor kemudian dihitung untuk model Regresi Linear untuk perbandingan
+- Model *RandomForestRegressor* menunjukkan hasil yang lebih baik, tetapi masih menunjukkan *overfitting*
+
+## *Fine Tuning* Model
+- Setelah membuat model, model tersebut disetel dengan baik
+- Berbagai metode penyetelan disediakan
+
+---
