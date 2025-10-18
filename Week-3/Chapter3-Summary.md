@@ -13,41 +13,41 @@
 # 3. Evaluasi Model dan Metrik Kinerja
 - **Keterbatasan Akurasi** : Tidak ideal untuk dataset yang tidak seimbang, di mana satu kelas mendominasi.
 - ***Confusion Matrix*** :
-  > Matriks ini menunjukkan prediksi sebenarnya dan yang diprediksi oleh model. <br>
-  > Matriks ini membantu analisis kesalahan secara rinci, termasuk kelas mana yang sering membingungkan. <br>
+  > -Matriks ini menunjukkan prediksi sebenarnya dan yang diprediksi oleh model. <br>
+  > -Matriks ini membantu analisis kesalahan secara rinci, termasuk kelas mana yang sering membingungkan. <br>
 - **Presisi, Recall, dan F1 Score** :
-  > **Presisi**: Rasio *true positives* terhadap semua prediksi positif. Metriks ini mengukur ketepatan prediksi positif. <br>
-  > **Recall (Sensitivity)**: Rasio *true positives* terhadap jumlah total yang sebenarnya positif. Metriks  ini mengukur tingkat keberhasilan menangkap semua kejadian. <br>
-  > **Skor F1**: Rata-rata harmonis dari presisi dan recall yang memberikan ukuran performa yang seimbang. <br>
+  > -**Presisi**: Rasio *true positives* terhadap semua prediksi positif. Metriks ini mengukur ketepatan prediksi positif. <br>
+  > -**Recall (Sensitivity)**: Rasio *true positives* terhadap jumlah total yang sebenarnya positif. Metriks  ini mengukur tingkat keberhasilan menangkap semua kejadian. <br>
+  > -**Skor F1**: Rata-rata harmonis dari presisi dan recall yang memberikan ukuran performa yang seimbang. <br>
 
 # 4. Trade-off Presisi/Recall dan Ambang Keputusan
 - ***Trade-off*** : Meningkatkan presisi biasanya menurunkan recall, dan sebaliknya.
 -  **Fungsi Keputusan dan Ambang Batas** :
-  > Model menghitung skor untuk setiap *instance*. <br>
-  > Ambang batas digunakan untuk menentukan kelas berdasarkan skor tersebut. <br>
-  > Menyetel ambang batas menyesuaikan keseimbangan antara presisi dan recall untuk hasil optimal. <br>
+  > -Model menghitung skor untuk setiap *instance*. <br>
+  > -Ambang batas digunakan untuk menentukan kelas berdasarkan skor tersebut. <br>
+  > -Menyetel ambang batas menyesuaikan keseimbangan antara presisi dan recall untuk hasil optimal. <br>
 
 # 5. Kurva ROC dan AUC
 - **Kurva ROC** :
-  > Menggambarkan rasio positif benar (recall) terhadap positif palsu pada berbagai ambang batas. <br>
-  > Memvisualisasikan *trade-off* antara sensitivitas dan spesifikasi. <br>
+  > -Menggambarkan rasio positif benar (recall) terhadap positif palsu pada berbagai ambang batas. <br>
+  > -Memvisualisasikan *trade-off* antara sensitivitas dan spesifikasi. <br>
 - ***AUC (Area Under the Curve)*** :
-  > Mengintegrasikan seluruh kurva ROC menjadi satu nilai. <br>
-  > Nilai mendekati 1 menunjukkan model sangat baik dalam membedakan antara kelas. <br>
-  > Pada perbandingan model, AUC yang lebih tinggi menunjukkan model yang lebih baik. <br>
+  > -Mengintegrasikan seluruh kurva ROC menjadi satu nilai. <br>
+  > -Nilai mendekati 1 menunjukkan model sangat baik dalam membedakan antara kelas. <br>
+  > -Pada perbandingan model, AUC yang lebih tinggi menunjukkan model yang lebih baik. <br>
 
 # 6. Strategi Klasifikasi Multiclass
 - **Algoritma Multiklas Bawaan** : Beberapa algoritma (seperti *Random Forest* dan *Naive Bayes*) secara alami menangani banyak kelas.
 - **Strategi *Binary*** :
-  > *One-vs-the-Rest* (OvR) : Melatih satu *classifier* untuk setiap kelas, yang membedakan antara kelas tersebut dan semua yang lain. Kelas dengan skor tertinggi dipilih. <br>
-  > *One-vs-One* (OvO) : Melatih *classifier* untuk setiap pasangan kelas **(N(N-1)/2)**. Setiap *classifier* memberikan suara, dan kelas yang paling banyak mendapatkan suara menang. <br>
+  > -*One-vs-the-Rest* (OvR) : Melatih satu *classifier* untuk setiap kelas, yang membedakan antara kelas tersebut dan semua yang lain. Kelas dengan skor tertinggi dipilih. <br>
+  > -*One-vs-One* (OvO) : Melatih *classifier* untuk setiap pasangan kelas **(N(N-1)/2)**. Setiap *classifier* memberikan suara, dan kelas yang paling banyak mendapatkan suara menang. <br>
 - **Implementasi** : *Scikit-Learn* secara otomatis menangani OvR atau OvO saat menggunakan *classifier* biner untuk masalah multiklas
 
  # 7. Analisis Kesalahan
  - **Tujuan** : Memahami kesalahan tertentu agar dapat meningkatkan model.
  - **Alat Analisis** :
-  > *Confusion Matrix* : Mengidentifikasi kelas mana yang paling sering membingungkan. <br>
-  > Pemeriksaan Kasus Spesifik : Membantu memahami alasan di balik kesalahan, seperti digit yang buruk penulisannya atau masalah *pre-processing* gambar. <br>
+  > -*Confusion Matrix* : Mengidentifikasi kelas mana yang paling sering membingungkan. <br>
+  > -Pemeriksaan Kasus Spesifik : Membantu memahami alasan di balik kesalahan, seperti digit yang buruk penulisannya atau masalah *pre-processing* gambar. <br>
 
 # 8. Klasifikasi Multilabel
 - **Konsep** : Memberikan beberapa tabel sekaligus pada satu *instance* (misalnya gambar dapat diberi label 'digit' dan 'berjumlah loop' jika relevan)
